@@ -6,9 +6,11 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from networkx.drawing.nx_pydot import graphviz_layout
 
+
 num_of_nodes = 90
 solution = []
 something = [i for i in range(1, num_of_nodes + 1)]
+
 
 def MaxIndependentSet(T):
     independent_set = set()  

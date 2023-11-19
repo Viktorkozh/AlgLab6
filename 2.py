@@ -42,6 +42,7 @@ def actsel1(s):
         s = [x for x in s if x[0] > rmin]
     return sol
 
+
 if __name__ == '__main__':
     fillArr(20)
     print("Отрезки: ", sorted(arr))
