@@ -5,17 +5,17 @@ import random
 
 
 a = []
-arr = []
+list = []
 solution = []
 totalcost = []
 
 
-def fillArr(numOfEl):
-    arr.clear()
+def filllist(numOfEl):
+    list.clear()
     for _ in range(numOfEl):
         w = random.randint(10, 500)
         c = random.randint(1, 200)  # Генерируем правый конец отрезка
-        arr.append((w, c))
+        list.append((w, c))
 
 
 def knapsack(a):
@@ -33,11 +33,11 @@ def knapsack(a):
 
 
 if __name__ == '__main__':
-    fillArr(12)
-    print("Предметы (вес, стоимость): ", sorted(arr, key=lambda x: x[1] / x[0]))
-    sol, total = knapsack(arr)
-    arr.sort(key=lambda x: x[1]/x[0])
+    filllist(12)
+    print("Предметы (вес, стоимость): ", sorted(list, key=lambda x: x[1] / x[0]))
+    sol, total = knapsack(list)
+    list.sort(key=lambda x: x[1]/x[0])
     print("\nМесто в рюкзаке = 5000 грамм")
     print("Вес (грамм)\tКоличество поместившихся предметов\tЦена")
     for i in range(len(sol)):
-        print(f"{arr[i][0]}\t\t\t\t{sol[i]}\t\t\t{total[i]}")
+        print(f"{list[i][0]}\t\t\t\t{sol[i]}\t\t\t{total[i]}")

@@ -5,17 +5,17 @@ import random
 
 
 a = []
-arr = []
+list = []
 solution = []
 segLength = 5
 
 
-def fillArr(numOfEl):
-    arr.clear()
+def filllist(numOfEl):
+    list.clear()
     for _ in range(numOfEl):
         first = random.randint(0, 100)
         second = first + random.randint(1, 40)  # Генерируем правый конец отрезка
-        arr.append((first, second))
+        list.append((first, second))
 
 
 def actsel(s):
@@ -44,8 +44,8 @@ def actsel1(s):
 
 
 if __name__ == '__main__':
-    fillArr(20)
-    print("Отрезки: ", sorted(arr))
-    arr1 = arr.copy()
-    print("Отрезки непересекающиеся", actsel(arr))
-    print("Отрезки непересекающиеся", actsel1(arr1))
+    filllist(20)
+    print("Отрезки: ", sorted(list))
+    list1 = list.copy()
+    print("Отрезки непересекающиеся", actsel(list))
+    print("Отрезки непересекающиеся", actsel1(list1))
